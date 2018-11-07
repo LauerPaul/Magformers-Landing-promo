@@ -1,0 +1,8 @@
+section.children-about(v-if="children_about")
+	.container
+		.row
+			.col-12.text-center
+				.title(v-html="children_about.title")
+			.col-12
+				.video
+					video(:src="children_about.video.src", :poster="children_about.video.poster", controls="controls")

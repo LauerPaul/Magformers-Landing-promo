@@ -1,0 +1,28 @@
+section.reviews-case(v-if="text")
+	.container
+		.row
+			.col-12
+				.title(v-html="text.title")
+		
+		.row
+			.col-12
+				swiper(:options="swiperOptions").reviews-list
+					swiper-slide.item(v-for="(review, index) in reviews", :key="index")
+						.gray-bg
+							.container-fluid
+								.row
+									.col-md-6
+										.wrapper
+											.avatar
+												img(:src="`/static/images/reviews/${review.avatar}`", :alt="review.name")
+											.text(v-html="review.text")
+											.name {{ review.name }}, {{ review.age }}
+									.col-md-6
+										.photo
+											.photo-wrapper
+												img(:src="`/static/images/reviews/${review.photo}`")
+
+					.swiper-button-prev(slot="button-prev")
+					.swiper-button-next(slot="button-next")
+
+	video-case-component

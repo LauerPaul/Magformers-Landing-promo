@@ -1,0 +1,52 @@
+.product-menu {
+	// border-top: 4px solid #a084e0;
+	// border-bottom: 4px solid #a084e0;
+	// padding: 24px 0;
+	padding: 40px 0 0;
+	
+	.list {
+		@extend .d-flex;
+		@extend .align-items-center;
+		@extend .justify-content-center;
+
+		.item {
+			font-size: 16px;
+			line-height: 1;
+			color: #735fa3;
+			background: $white;
+			border: 1px solid #735fa3;
+			border-radius: 4px;
+			outline: none !important;
+			transition: all 0.24s;
+			cursor: pointer;
+			margin: 0px 8px;
+			position: relative;
+			padding: 0px 16px;
+			padding-left: 36px;
+			height: 42px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background: url('~/static/images/icons/star.png') no-repeat center;
+				display: inline-block;
+				top: -50%;
+				bottom: -50%;
+				margin: auto;
+				left: 8px;
+			}
+
+			&.active {
+				color: $white;
+				background: #735fa3;
+			}
+
+			&:hover:not(.active){
+				color: $white;
+				background: #735fa3;
+			}
+		}
+	}
+}

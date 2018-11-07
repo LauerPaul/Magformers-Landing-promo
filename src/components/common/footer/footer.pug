@@ -1,0 +1,9 @@
+footer
+	.container
+		.row
+			.col-12
+				.slogan(v-if="text") {{ text.slogan }}
+		.row
+			.col-12
+				.contacts(v-if="contacts")
+					a.tel(v-for="number of tel", :href="number_сlear(number)") {{ number }}

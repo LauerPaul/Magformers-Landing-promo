@@ -1,0 +1,15 @@
+header
+	.wrapper
+		.container
+			.row
+				.col-12
+					b-navbar-brand(:href="$route.path !== '/' ? '/' : ''")
+						img(:src="logo.src", :alt="logo.alt")
+
+					.advantages-icons
+						.item(v-for="(item, index) in items", :key="index")
+							span.image 
+								img(:src="item.img", :alt="'Иконка: ' + item.text")
+							span.text {{ item.text }}
+
+					.clearfix

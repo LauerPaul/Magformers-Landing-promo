@@ -1,0 +1,48 @@
+footer {
+	background: #48376f;
+	color: $white;
+	padding: 40px 16px;
+
+	.slogan {
+		text-align: center;
+		line-height: 1;
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+		cursor: default;
+		color: $white;
+		margin-bottom: 20px;
+	}
+
+	.contacts {
+		@extend .d-flex;
+		@extend .align-items-center;
+		@extend .justify-content-between;
+		min-height: 52px;
+		max-width: 740px;
+		margin: 0 auto;
+
+		.tel {
+			color: $white;
+			font-size: 18px;
+			line-height: 1;
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			padding-left: 52px;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 41px;
+				height: 51px;
+				background: url('~/static/images/icons/tel_ico.png') no-repeat center;
+				position: absolute;
+				left: 0px;
+				top: -50%;
+				bottom: -50%;
+				margin: auto;
+			}
+		}
+	}
+}

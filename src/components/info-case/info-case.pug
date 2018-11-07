@@ -1,0 +1,10 @@
+section.info-case(v-if="info_case")
+	.container
+		.row
+			.col-md-7
+				h2.title {{ info_case.title }}
+				.text(v-if="info_case.text")
+					p(v-for="(word, index) in info_case.text", :key="index", v-html="word.p")
+			.col-md-5
+				.image
+					img(:src="info_case.image", :alt="'Photo '+ info_case.title")

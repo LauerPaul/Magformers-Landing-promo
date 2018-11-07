@@ -1,0 +1,23 @@
+.awards-line {
+	padding: 64px 0;
+
+	.title {
+		color: #482a8c;
+		font-size: 30px;
+		line-height: 1;
+		font-weight: bold;
+		margin-bottom: 32px;
+	}
+
+	.items {
+
+		.item {
+	    	width: 100%;
+		    max-width: calc(100% / 7);
+			
+				@extend .d-flex;
+				@extend .align-items-center;
+				@extend .justify-content-center;
+		}
+	}
+}

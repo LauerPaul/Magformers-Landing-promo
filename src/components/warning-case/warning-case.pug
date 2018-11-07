@@ -1,0 +1,14 @@
+section.warning-case(v-if="warning_case")
+	.container
+		.row
+			.col-12
+				.title(v-html="text.title")
+			
+		.row(v-if="video")
+			.col-md-6
+				.text
+					p(v-for="(_case_, index) in text.p", :key="index", v-html="_case_")
+
+			.col-md-6
+				.video
+					video(:src="`/static/video/${video.src}`", :poster="`/static/images${video.poster}`", controls="controls")

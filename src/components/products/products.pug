@@ -1,0 +1,39 @@
+section.products#products
+	menu-component
+	.container(v-if="text")
+		.row
+			.col-12(v-if="products")
+				swiper(:options="swiperOptions").products-list
+					swiper-slide.item(v-for="(product, index) in products", :key="index", @click.native="toElement(product.art)")
+						.cover-wrapper
+							.cover
+								img(:src="`/static/images/products/${product.image}`", :alt="product.name + ' - ' + product.new_price + text.price_postfix")
+							.procent
+								svg(xmlns="http://www.w3.org/2000/svg", width="100%", height="100%", viewBox="0 0 108.97327 100.27098")
+									g#6307b547-389b-4969-af33-9ebaf6fdc28a(data-name="Слой 2")
+										g#d9de657f-b0a5-414d-bed0-e5b158bb5100(data-name="OBJECTS")
+											path.fill(d="M17.05421,86.77452c23.7164,24.0298,66.1786,13.5033,84.2968-12.1992,5.3879-7.6434,8.4856-17.1264,7.4102-26.4162-2.2036-19.0337-17.6793-33.6735-34.1582-41.6415-18.2752-8.8366-38.3708-9.9507-54.1682,4.6177-12.8971,11.8939-24.5991,32.4633-18.9972,50.4859C4.511,71.50862,9.66261,79.28522,17.05421,86.77452Z")
+								span.text -{{ (parseInt(product.procent) ? product.procent : 100 - Math.round(parseInt(product.new_price) * 100 / parseInt(product.old_price))) }}%
+
+							span.art Art: {{ product.art }}
+						.info-wrapper
+
+							.name {{ product.name }}
+							.economy {{ text.economy_text }}:
+								span {{ (parseInt(product.economy) ? product.economy : product.old_price - product.new_price) }}
+								span.rostfix {{ text.price_postfix }}
+
+							.price-steps
+								.old-column
+									span
+										span.price {{ product.old_price }}
+										span.postfix {{ text.price_postfix }}
+								.new-column
+									span
+										span.price {{ product.new_price }}
+										span.postfix {{ text.price_postfix }}
+
+							.footer {{ text.availability_text }}: {{ product.products_count }} {{ text.availability_postfix }}
+
+					.swiper-button-prev(slot="button-prev")
+					.swiper-button-next(slot="button-next")

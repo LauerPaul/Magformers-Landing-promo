@@ -1,0 +1,17 @@
+form.order(@submit="submit")
+	.container-fluide
+		.row
+			.col-12(v-if="text.timer")
+				counter-component
+			.col-12
+				.input-group
+					input.form-control(type="text", v-model="firstname", :state="nameValidate", :placeholder="text.firstname_placeholder", :class="validateError.name ? 'error' : ''")
+					span.error(v-if="validateError.name") {{ validateError.name }}
+			.col-12
+				.input-group
+					input.form-control(type="text", v-model="lastname", :state="lastnameValidate", :placeholder="text.lastname_placeholder", :class="validateError.lastname ? 'error' : ''")
+					span.error(v-if="validateError.lastname") {{ validateError.lastname }}
+			.col-12
+				button.btn.btn-primary {{ text.btn_text }}
+			.col-12
+				.description {{ text.description }}

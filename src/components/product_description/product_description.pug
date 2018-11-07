@@ -1,0 +1,62 @@
+section.product_description(v-if="text && product")#product_description
+	.container
+		.row
+			.col-12
+				.title(v-html="text.title")
+				.product-title {{ product.name }}
+		.row
+			.col-md-4
+				.product-preview
+					.cover-wrapper
+						.cover
+							img(:src="`/static/images/products/${product.image}`", :alt="product.name + ' - ' + product.new_price + text.price_postfix")
+						span.art Art: {{ product.art }}
+
+					.in-case
+						.info-text {{ text.description_in_case }}
+						.elements
+							.item(v-if="product.elements", v-for="(item, index) in product.elements", :key="index", :class="index !== product.elements.length-1 ? 'pluse' : ''")
+								.wrapper
+									img(:src="`/static/images/products/elements/${item.src}`")
+								.count {{ item.count }} шт.
+			.col-md-8
+				.video(v-if="video")
+					video(:src="`/static/video/'${video.src}`", :poster="video.poster ? `/static/images/products/posters/${video.poster}` : false", controls="controls")
+		.row
+			.col-12
+				.description-transform
+					.text(v-html="text.description")
+				.list-transform
+					.item(v-if="product.models", v-for="item, index) in product.models", :key="index")
+						.wrapper
+							img(:src="`/static/images/products/models/${item}`")
+		
+	.container-fluid.footer-section
+		.container
+			.row
+				.col-md-5
+					.product
+						.cover-wrapper
+							.cover
+								img(:src="`/static/images/products/${product.image}`", :alt="product.name + ' - ' + product.new_price + text.price_postfix")
+								.procent
+									svg(xmlns="http://www.w3.org/2000/svg", width="100%", height="100%", viewBox="0 0 108.97327 100.27098")
+										g#6307b547-389b-4969-af33-9ebaf6fdc28a(data-name="Слой 2")
+											g#d9de657f-b0a5-414d-bed0-e5b158bb5100(data-name="OBJECTS")
+												path.fill(d="M17.05421,86.77452c23.7164,24.0298,66.1786,13.5033,84.2968-12.1992,5.3879-7.6434,8.4856-17.1264,7.4102-26.4162-2.2036-19.0337-17.6793-33.6735-34.1582-41.6415-18.2752-8.8366-38.3708-9.9507-54.1682,4.6177-12.8971,11.8939-24.5991,32.4633-18.9972,50.4859C4.511,71.50862,9.66261,79.28522,17.05421,86.77452Z")
+									span.text -{{ (parseInt(product.procent) ? product.procent : 100 - Math.round(parseInt(product.new_price) * 100 / parseInt(product.old_price))) }}%
+						counter-component
+				.col-md-7
+					.info-wrapper
+						.info
+							.economy {{ prodText.economy_text }}
+								span.price &nbsp;{{ (parseInt(product.economy) ? product.economy : product.old_price - product.new_price) }}
+								span &nbsp;{{ prodText.price_postfix}}
+							.prices
+								.old_price
+									span.price {{ product.old_price }}
+									span &nbsp;{{ prodText.price_postfix}}
+								.new_price {{ product.new_price }}
+									span &nbsp;{{ prodText.price_postfix}}
+						.btn-wrapper
+							button(type="button", @click="toOrder").btn.btn-primary {{ promoText.btn_text }}

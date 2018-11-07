@@ -1,0 +1,48 @@
+.shipping-and-payment {
+	padding: 80px 0;
+
+	.title {
+		font-size: 30px;
+		line-height: 1;
+		font-weight: bold;
+		color: #482a8c;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.list {
+
+		.item {
+			text-align: center;
+
+			.image {
+				text-align: center;
+				margin: 0 auto;
+				margin-bottom: 24px;
+				width: 96px;
+				height: 96px;
+
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.text {
+				text-align: center;
+				font-size: 24px;
+				line-height: 1;
+				color: #482a8c;
+				margin-bottom: 24px;
+				cursor: default;
+			}
+
+			.description {
+				text-align: center;
+				font-size: 17px;
+				line-height: 1.2;
+				color: #515151;
+				cursor: default;
+			}
+		}
+	}
+}

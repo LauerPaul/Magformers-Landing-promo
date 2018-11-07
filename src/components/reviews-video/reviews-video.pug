@@ -1,0 +1,10 @@
+.reviews-video-case(v-if="reviewsVideo")
+	.container
+		.row
+			.col-12
+				.title(v-html="title")
+
+		.row.list
+			.col-md-4(v-for="(video, index) in list", :key="index")
+				.video
+					video(:src="`/static/video/${video.src}`", :poster="`/static/images/reviews_video/${video.poster}`", controls="controls")

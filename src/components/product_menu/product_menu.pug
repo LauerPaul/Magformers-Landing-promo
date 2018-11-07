@@ -1,0 +1,10 @@
+nav.product-menu(v-if="menu && menu.length")
+	.container
+		.row
+			.col-12
+				.list
+					button.item(type="button",
+								v-for="{name, key} in menu",
+								:key="key",
+								:class="currentMenu == key ? 'active' : ''",
+								@click.eventprevent="setCurrentMenu(key)") {{ name }}

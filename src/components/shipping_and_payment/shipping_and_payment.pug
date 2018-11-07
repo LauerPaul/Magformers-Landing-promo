@@ -1,0 +1,12 @@
+section.shipping-and-payment(v-if="text")
+	.container
+		.row
+			.col-12
+				.title(v-html="text.title")
+		.row.list
+			.col-md-3(v-for="(item, index) in list", :key="index")
+				.item
+					.image
+						img(:src="`/static/images/icons/shipping_and_payment/${item.icon}`", :alt="'Изображене ' + item.text")
+					.text(v-html="item.text")
+					.description(v-html="item.description")

@@ -1,0 +1,53 @@
+form.order {
+	max-width: 260px;
+	border: 1px solid #a993dc;
+	border-radius: 20px;
+	padding: 16px;
+	float: right;
+
+	.timer-block {
+		margin: 0px;
+		max-width: 100%;
+		margin-bottom: 16px;
+	}
+
+	.input-group {
+		margin-bottom: 16px;
+
+		.form-control {
+			border-color: #a993dc;
+			height: 30px;
+			font-size: 16px;
+			line-height: 1;
+			outline: none !important;
+			padding: 4px 8px;
+			box-shadow: none !important;
+			color: #482a8c;
+			position: relative;
+
+			&.error {
+				border-color: red;
+			}
+		}
+
+		span.error {
+			position: absolute;
+			display: inline-block;
+			color: red;
+			font-size: 10px;
+			top: 100%;
+		}
+	}
+
+	.btn {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	.description {
+		font-size: 13px;
+		line-height: 1;
+		color: #482a8c;
+		cursor: default;
+	}
+}

@@ -1,0 +1,30 @@
+.children-about {
+	padding: 80px;
+	background: url('~/static/images/bg/children_about.png') no-repeat center;
+
+	.title {
+		color: #482a8c;
+		font-weight: bold;
+		font-size: 30px;
+		margin-bottom: 40px;
+		line-height: 1;
+
+		span {
+			color: #ef6879;
+		}
+	}
+
+	.video {
+		@extend .d-flex;
+		@extend .align-items-center;
+		@extend .justify-content-center;
+
+		video {
+			max-width: 100%;
+			width: 878px;
+			height: 512px;
+			box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.12);
+			background: white;
+		}
+	}
+}

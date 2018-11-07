@@ -1,0 +1,22 @@
+section.bonus-case
+	.container(v-if="bonus && text")
+		.row
+			.col-12
+				.title(v-html="text.title")
+		.row
+			.col-12
+				.description(v-html="text.description", v-if="text.description")
+		.row
+			.col-12
+				.description-second(v-html="text.description_second", v-if="text.description_second")
+		.row
+			.col-12
+				swiper(:options="swiperOptions", v-if="list").bonus-list
+					swiper-slide.item(v-for="(item, index) in list", :key="index")
+						.cover
+							img(:src="`/static/images/bonus/${item.image}`", :alt="'Изображение '+item.title", v-if="item.image && item.title")
+						.name(v-html="item.title", v-if="item.title")
+						a.btn.btn-primary(:href="'/static/book/'+item.file", download) {{ text.btn_text }}
+					
+					.swiper-button-prev(slot="button-prev")
+					.swiper-button-next(slot="button-next")

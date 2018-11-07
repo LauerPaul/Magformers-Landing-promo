@@ -1,0 +1,191 @@
+{
+	"menu": [
+		{
+			"name": "Бестселлеры",
+			"key": "bestsellers",
+			"all": true
+		},
+		{
+			"name": "Стартовые",
+			"key": "starting",
+			"all": false
+		},
+		{
+			"name": "Машины",
+			"key": "cars",
+			"all": false
+		},
+		{
+			"name": "Животные",
+			"key": "animals",
+			"all": false
+		},
+		{
+			"name": "Дома",
+			"key": "home",
+			"all": false
+		}
+	],
+	"products": [
+		{
+			"art": 714001,
+			"name": "Базовый супер 3D набор, 14 элементов",
+			"elements": [
+				{
+					"src": "29/cube.png",
+					"count": 6
+				},
+				{
+					"src": "29/triangle.png",
+					"count": 6
+				},
+				{
+					"src": "29/cube.png",
+					"count": 6
+				}
+			],
+			"models": ["29/1.jpg", "29/2.jpg", "29/3.jpg", "29/4.jpg", "29/5.jpg"],
+			"procent": 20,
+			"economy": "",
+			"old_price": 849,
+			"new_price": 722,
+			"products_count": 10,
+			"image": "product_1.png",
+			"video": {
+				"poster": "1.jpg",
+				"src": "v1.mp4"
+			},
+			"categories": ["starting", "cars"]
+		},
+		{
+			"art": 714002,
+			"name": "Базовый супер 3D набор, 14 элементов",
+			"elements": [
+				{
+					"src": "40/cube_blue.png",
+					"count": 6
+				},
+				{
+					"src": "40/triagle_yellow.png",
+					"count": 6
+				}
+			],
+			"models": ["29/1.jpg", "29/2.jpg", "29/3.jpg", "29/4.jpg", "29/5.jpg"],
+			"procent": "",
+			"economy": "",
+			"old_price": 849,
+			"new_price": 722,
+			"products_count": 10,
+			"image": "product_1.png",
+			"video": {
+				"poster": "1.jpg",
+				"src": "v1.mp4"
+			},
+			"categories": ["cars"]
+		},
+		{
+			"art": 714003,
+			"name": "Базовый супер 3D набор, 14 элементов",
+			"elements": [
+				{
+					"src": "29/cube.png",
+					"count": 6
+				},
+				{
+					"src": "29/triangle.png",
+					"count": 6
+				}
+			],
+			"models": ["29/1.jpg", "29/2.jpg", "29/3.jpg", "29/4.jpg", "29/5.jpg"],
+			"procent": "",
+			"economy": "",
+			"old_price": 849,
+			"new_price": 722,
+			"products_count": 10,
+			"image": "product_1.png",
+			"video": {
+				"poster": "1.jpg",
+				"src": "v1.mp4"
+			},
+			"categories": ["animals", "cars"]
+		},
+		{
+			"art": 714004,
+			"name": "Базовый супер 3D набор, 14 элементов",
+			"elements": [
+				{
+					"src": "40/cube_blue.png",
+					"count": 6
+				},
+				{
+					"src": "40/triagle_yellow.png",
+					"count": 6
+				}
+			],
+			"models": ["29/1.jpg", "29/2.jpg", "29/3.jpg", "29/4.jpg", "29/5.jpg"],
+			"procent": "",
+			"economy": "",
+			"old_price": 849,
+			"new_price": 722,
+			"products_count": 10,
+			"image": "product_1.png",
+			"video": {
+				"poster": "1.jpg",
+				"src": "v1.mp4"
+			},
+			"categories": ["home", "cars"]
+		},
+		{
+			"art": 714005,
+			"name": "Базовый супер 3D набор, 14 элементов",
+			"elements": [
+				{
+					"src": "29/cube.png",
+					"count": 6
+				},
+				{
+					"src": "29/triangle.png",
+					"count": 6
+				}
+			],
+			"models": ["29/1.jpg", "29/2.jpg", "29/3.jpg", "29/4.jpg", "29/5.jpg"],
+			"procent": "",
+			"economy": "",
+			"old_price": 849,
+			"new_price": 722,
+			"products_count": 10,
+			"image": "product_1.png",
+			"video": {
+				"poster": "1.jpg",
+				"src": "v1.mp4"
+			},
+			"categories": ["home", "animals"]
+		},
+		{
+			"art": 714006,
+			"name": "Базовый супер 3D набор, 14 элементов",
+			"elements": [ 
+				{
+					"src": "40/cube_blue.png",
+					"count": 6
+				},
+				{
+					"src": "40/triagle_yellow.png",
+					"count": 6
+				}
+			],
+			"models": ["29/1.jpg", "29/2.jpg", "29/3.jpg", "29/4.jpg", "29/5.jpg"],
+			"procent": "",
+			"economy": 120,
+			"old_price": 849,
+			"new_price": 722,
+			"products_count": 10,
+			"image": "product_1.png",
+			"video": {
+				"poster": "1.jpg",
+				"src": "v1.mp4"
+			},
+			"categories": ["home"]
+		}
+	]
+}

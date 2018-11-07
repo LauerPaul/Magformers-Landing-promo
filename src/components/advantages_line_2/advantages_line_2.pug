@@ -1,0 +1,10 @@
+section.advantages-line-2(v-if="advantages_2")
+	.container
+		.row
+			.col-12
+				h3.title(v-html="advantages_2.title")
+		.row
+			.col-md-auto.item(v-for="(item, index) in advantages_2.items", :key="index")
+				.image
+					img(:src="item.img", :alt="'Icon ' + item.text")
+				.text(v-html="item.text")

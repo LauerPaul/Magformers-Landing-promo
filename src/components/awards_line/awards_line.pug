@@ -1,0 +1,9 @@
+section.awards-line(v-if="awards_case")
+	.container
+		.row
+			.col-12.text-center
+				.title {{ awards_case.title }}
+
+		.row.items
+			.col-md-auto.item(v-for="(item, index) in awards_case.items", :key="index")
+				img(:src="item.img", :alt="item.alt")

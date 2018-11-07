@@ -1,0 +1,7 @@
+section.advantages-line(v-if="advantages.items")
+	.container
+		.row
+			.col-md-auto.item(v-for="(item, index) in advantages.items", :key="index")
+				.image
+					img(:src="item.img", :alt="'Icon '+ item.text")
+				.text(v-html="item.text")

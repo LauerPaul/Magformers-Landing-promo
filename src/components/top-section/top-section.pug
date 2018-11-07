@@ -1,0 +1,33 @@
+section.top-section(v-if="text && promo")
+	.container
+		.row
+
+			.col-md-6
+				.description-section
+					h1.title(v-html="title")
+					.present-label
+
+			.col-md-6
+				.promo-case
+					.promo-wrapper
+						.title(v-html="promo.title")
+						
+						.top-product
+							img(:src="promo.img_src", :alt="promo.img_alt")
+						
+						.economy-line {{ text.economy_text }} {{ (parseInt(promo.economy) ? promo.economy : promo.old_price - promo.new_price) }} {{ text.price_postfix }}
+
+						.price-steps
+							.old-column
+								span
+									span.price {{ promo.old_price }}
+									span.postfix {{ text.price_postfix }}
+							.new-column
+								span
+									span.price {{ promo.new_price }}
+									span.postfix {{ text.price_postfix }}
+
+						counter-component
+
+						.btn-wrapper
+							button.btn.btn-primary.big(@click="toProducts") {{ promo.btn_text }}

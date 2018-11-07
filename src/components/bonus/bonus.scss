@@ -1,0 +1,103 @@
+.bonus-case {
+	padding: 80px 0;
+	background: #80CEC6 url('~/static/images/bg/bonus.png') no-repeat center;	
+
+	.title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 1;
+		color: #482a8c;
+		margin-bottom: 24px;
+		cursor: default;
+	}
+	
+	.description {
+		text-align: center;
+		font-weight: bold;
+		line-height: 1.2;
+		font-size: 24px;
+		color: $white;
+		margin-bottom: 16px;
+		cursor: default;
+	}
+	
+	.description-second {
+		text-align: center;
+		line-height: 1.2;
+		font-size: 24px;
+		color: #482a8c;
+		cursor: default;
+	}
+
+	.bonus-list {
+		padding: 40px;
+    	margin: 0px -40px;
+		@extend .d-flex;
+		@extend .align-items-center;
+		@extend .justify-content-around;
+		position: relative;
+
+		.item {
+			max-width: 252px;
+			overflow: hidden;
+			position: relative;
+			transition: all 0.24s;
+			text-align: center;
+
+			.cover {
+				text-align: center;
+				height: 204px;
+				margin-bottom: 24px;
+					
+					@extend .d-flex;
+					@extend .align-items-end;
+					@extend .justify-content-center;
+			}
+			
+			.name {
+				text-align: center;
+				font-size: 18px;
+				color: #515151;
+				line-height: 1.2;
+				margin-bottom: 24px;
+			}
+
+			.btn {
+				height: 36px;
+				font-size: 21px;
+				line-height: 1;
+				width: 100%;
+				max-width: 174px;
+			}
+		}
+	}
+
+	.swiper-button-next {
+	    right: 0px;
+	    background: url('~/static/images/icons/arrow_slider_white.png') no-repeat center;
+	    transition: all 0.24s;
+
+	    &:not(.swiper-button-disabled) {
+	    	opacity: 0.7;
+
+		    &:hover {
+		    	opacity: 1;
+		    }
+	    }
+	}
+	.swiper-button-prev {
+	    left: 0px;
+	    background: url('~/static/images/icons/arrow_slider_white.png') no-repeat center;
+	    transform: rotate(180deg);
+	    transition: all 0.24s;
+
+	    &:not(.swiper-button-disabled) {
+	    	opacity: 0.7;
+
+		    &:hover {
+		    	opacity: 1;
+		    }
+	    }
+	}
+}

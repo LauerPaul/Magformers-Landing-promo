@@ -1,0 +1,21 @@
+section.security-case(v-if="security_case")
+	.container
+		.row
+			.col-md-5
+				.image
+					img(:src="`/static/images${image}`")
+			.col-md-7
+				.content(v-if="text")
+					.title(v-html="text.title")
+					.text(v-if="text.p")
+						p(v-for="(p, index) in text.p", :key="p", v-html="p")
+		
+	.container-fluid.mask
+		.row
+			.container
+				.row.list
+					.col-md-3(v-for="(item, index) in list", :key="index")
+						.item
+							.image
+								img(:src="`/static/images/icons/security_case/${item.icon}`")
+							.description(v-html="item.text")

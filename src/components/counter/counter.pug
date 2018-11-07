@@ -1,0 +1,14 @@
+section.timer-block
+	p {{ title }}
+	#time-less-action
+		.time-less-block
+			span.time-less-block-text.action-hours {{ time.hours }}
+			span.action-text {{ time.hoursPostfix }}
+		.action-pointer {{ time.devider }}
+		.time-less-block
+			span.time-less-block-text.action-minut {{ time.minutes }}
+			span.action-text {{ time.minutesPostfix }}
+		.action-pointer {{ time.devider }}
+		.time-less-block
+			span.time-less-block-text.action-sec {{ time.seconds }}
+			span.action-text {{ time.hsecondsPostfix }}
